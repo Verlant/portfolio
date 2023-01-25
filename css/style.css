@@ -1,0 +1,258 @@
+@import url("https://fonts.cdnfonts.com/css/microsport");
+@import url("https://fonts.cdnfonts.com/css/spy-agency");
+
+:root {
+  --orange: #f37d0f;
+  --yellow: #e2ac21;
+  --red: #e24421;
+  --white: #e5dfda;
+  --light-grey: #bfbab6;
+  --grey: #807c79;
+  --dark-grey: #403e3d;
+  --black: #1a1918;
+  --font-microsport: "Microsport", sans-serif;
+  --font-spy_agency: "Spy Agency", sans-serif;
+  --font-spy_agency_3D: "Spy Agency 3D", sans-serif;
+}
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  background-color: var(--black);
+  font-family: var(--font-microsport);
+  position: relative;
+}
+main {
+  height: 100vh;
+  width: 90%;
+}
+ul {
+  list-style: none;
+}
+
+/* ********************************************************* Nav Bar ******************************************************* */
+
+nav {
+  height: 100vh;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  animation: gradient 60s ease infinite;
+  position: sticky;
+  left: 0;
+  /*Sans bandes noires*/
+  background: linear-gradient(
+    180deg,
+    rgba(226, 68, 33, 0.5) 5%,
+    rgba(226, 68, 33, 0.75) 10%,
+    rgba(226, 68, 33, 0.5) 20%,
+
+    rgba(243, 125, 15, 0.5) 25%,
+    rgba(243, 125, 15, 0.75) 30%,
+    rgba(243, 125, 15, 0.5) 40%,
+
+    rgba(226, 172, 33, 0.5) 45%,
+    rgba(226, 172, 33, 0.75) 50%,
+    rgba(226, 172, 33, 0.5) 60%,
+
+    rgba(243, 125, 15, 0.5) 65%,
+    rgba(243, 125, 15, 0.75) 70%,
+    rgba(243, 125, 15, 0.5) 80%,
+
+    rgba(226, 68, 33, 0.5) 85%,
+    rgba(226, 68, 33, 0.75) 90%,
+    rgba(226, 68, 33, 0.5) 100%
+  );
+  /* Gradient avec couleur indiquant le fil d'ariane -> a regler pour chaque hauteur d'ecran différent */
+  /* background: linear-gradient(
+    180deg,
+    rgba(226, 68, 33, 0.375) 3%,
+    rgba(226, 68, 33, 0.5) 6%,
+    rgba(226, 68, 33, 0.8) 7.1%,
+    rgba(226, 68, 33, 0.5) 8%,
+    rgba(226, 68, 33, 0.375) 20%,
+
+    rgba(243, 125, 15, 0.375) 25%,
+    rgba(243, 125, 15, 0.5) 27.4%,
+    rgba(243, 125, 15, 0.8) 28.5%,
+    rgba(243, 125, 15, 0.5) 29.4%,
+    rgba(243, 125, 15, 0.375) 40%,
+
+    rgba(226, 172, 33, 0.375) 45%,
+    rgba(226, 172, 33, 0.5) 49%,
+    rgba(226, 172, 33, 0.8) 50%,
+    rgba(226, 172, 33, 0.5) 51.1%,
+    rgba(226, 172, 33, 0.375) 60%,
+
+    rgba(243, 125, 15, 0.375) 65%,
+    rgba(243, 125, 15, 0.5) 70.5%,
+    rgba(243, 125, 15, 0.8) 71.55%,
+    rgba(243, 125, 15, 0.5) 72.5%,
+    rgba(243, 125, 15, 0.375) 75%,
+
+    rgba(226, 68, 33, 0.375) 80%,
+    rgba(226, 68, 33, 0.5) 92%,
+    rgba(226, 68, 33, 0.8) 93%,
+    rgba(226, 68, 33, 0.5) 94%,
+    rgba(226, 68, 33, 0.375) 100%
+  ); */
+  background-size: 100% 500%;
+}
+@keyframes gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  12.5% {
+    background-position: 100% 25%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  37.5% {
+    background-position: 100% 75%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  62.5% {
+    background-position: 100% 75%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+  87.5% {
+    background-position: 100% 25%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+nav ul {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 50px;
+  flex-direction: column;
+  font-size: 0.9vw;
+  font-family: var(--font-spy_agency);
+}
+nav ul li {
+  transform: scaleY(1.2);
+  /* -webkit-transform: scaleY(1.2);
+  -moz-transform: scaleY(1.2);
+  -o-transform: scaleY(1.2); */
+  background: radial-gradient(
+    100% 124.19% at 0% 0%,
+    var(--black) 0%,
+    var(--dark-grey) 30%,
+    var(--black) 50%,
+    var(--dark-grey) 70%,
+    var(--black) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+nav ul li a:hover {
+  text-decoration: underline var(--white);
+  background: radial-gradient(
+    100% 124.19% at 0% 0%,
+    var(--white) 0%,
+    var(--light-grey) 30%,
+    var(--white) 50%,
+    var(--light-grey) 70%,
+    var(--white) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+nav ul li div {
+  width: 80%;
+  height: 1px;
+  margin: 0 auto;
+  background-color: var(--black);
+}
+
+/* ********************************************************* Acceuil ******************************************************* */
+
+.main-acceuil {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-spy_agency);
+}
+.presentation {
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-size: 3vmin;
+  background: radial-gradient(
+    100% 124.19% at 0% 0%,
+    rgba(226, 68, 33, 0.8) 0%,
+    rgba(243, 125, 15, 0.8) 30%,
+    rgba(226, 172, 33, 0.8) 50%,
+    rgba(243, 125, 15, 0.8) 70%,
+    rgba(226, 68, 33, 0.8) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+.presentation::before {
+  content: "";
+  width: 50%;
+  height: 35%;
+  border-top: 3px groove var(--orange);
+  border-left: 3px ridge var(--orange);
+  border-top-left-radius: 20px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+.presentation::after {
+  content: "";
+  width: 50%;
+  height: 35%;
+  border-right: 3px ridge var(--orange);
+  border-bottom: 3px groove var(--orange);
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.key-word {
+  font-size: 3.5vmin;
+  font-family: var(--font-microsport);
+}
+
+/* ******************************************************* Realisation ***************************************************** */
+.main-realisation {
+  color: var(--white);
+}
+.main-realisation article {
+  width: 80%;
+  height: 80%;
+}
+#audio_player_img {
+  width: 100%;
+  height: 80%;
+  background-image: url(../assets/audio_player.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#asso_couture_img {
+  width: 50%;
+  height: 50%;
+  background-image: url(../assets/asso_couture.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
