@@ -5,7 +5,7 @@
 include_once 'head.php'
 ?>
 
-<body class="body-CV">
+<body>
     <?php
     // include_once 'header.php';
     include_once 'nav.php';

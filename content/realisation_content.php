@@ -2,7 +2,8 @@
     <article>
         <img id="audio_player_img" src="assets/audio_player.png" />
         <h2><a href="https://verlyck.needemand.com/projets_web/audio_player" target="_blank">Lecteur Audio</a></h2>
-        <p>Lecteur musique en ligne contenant 20 titres libres de droits.</p>
+        <p>Lecteur musique en ligne contenant 20 titres libres de droits. <br />
+            Fonctionne uniquement sur Firefox en version Desktop pour le moment.</p>
         <p>Projet réalisé dans le cadre de ma formation</p>
         <ul>
             <li>HTML</li>
@@ -20,7 +21,7 @@
             <li>CSS</li>
         </ul>
     </article>
-    <article>
+    <!-- <article>
         <img id="audio_player_img" src="assets/audio_player.png" />
         <h2><a href="https://verlyck.needemand.com/projets_web/audio_player" target="_blank">Lecteur Audio</a></h2>
         <p>Lecteur musique en ligne contenant 20 titres libres de droits.</p>
@@ -40,5 +41,5 @@
             <li>HTML</li>
             <li>CSS</li>
         </ul>
-    </article>
+    </article> -->
 </main>

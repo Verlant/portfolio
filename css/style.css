@@ -25,27 +25,47 @@
 }
 body {
   min-height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(120px, 10%) 1fr;
+  grid-template-rows: 1fr;
   background-color: var(--black);
   font-family: var(--font-microsport);
   /* position: relative; */
 }
 main {
-  width: 90%;
-  margin-left: 10%;
+  /* width: 100%; */
+  /* margin-left: 10%; */
+  grid-column: 2 / -1;
 }
 ul {
   list-style: none;
 }
+a {
+  color: var(--orange);
+}
+
+#social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  grid-column: 2 / -1;
+  position: fixed;
+  right: 10px;
+  top: 40%;
+}
+
+svg {
+  width: 30px;
+  height: 30px;
+}
 
 /* ********************************************************* Nav Bar ******************************************************* */
-/* header {
-  position: sticky;
-} */
 nav {
   height: 100vh;
   width: 10%;
   min-width: 120px;
+  grid-column: 1 / 1;
   display: flex;
   justify-content: center;
   animation: gradient 60s ease infinite;
@@ -188,6 +208,7 @@ nav ul li div {
 
 .main-acceuil {
   display: flex;
+  justify-content: center;
   align-items: center;
   font-family: var(--font-spy_agency);
 }
@@ -198,7 +219,7 @@ nav ul li div {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  font-size: 3vmin;
+  font-size: 2.5vmin;
   background: radial-gradient(
     100% 124.19% at 0% 0%,
     rgba(226, 68, 33, 0.8) 0%,
@@ -235,11 +256,12 @@ nav ul li div {
   bottom: 0;
 }
 .key-word {
-  font-size: 3.5vmin;
+  font-size: 3vmin;
   font-family: var(--font-microsport);
 }
 
 /* ******************************************************* Realisation ***************************************************** */
+
 .main-realisation {
   color: var(--white);
   display: flex;
@@ -250,9 +272,8 @@ nav ul li div {
   font-family: var(--font-masone);
 }
 .main-realisation article {
-  width: 30%;
-  min-width: 300px;
-  flex-basis: 40%;
+  min-width: 260px;
+  flex-basis: 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -260,22 +281,14 @@ nav ul li div {
   margin: 10px;
 }
 #audio_player_img {
-  max-width: 100%;
+  max-width: 90%;
   max-height: 20%;
-  /* background-image: url(../assets/audio_player.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; */
   border-radius: 10px;
   margin: 0 auto;
 }
 #asso_couture_img {
   max-width: 40%;
   max-height: 20%;
-  /* background-image: url(../assets/asso_couture.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; */
   border-radius: 10px;
   margin: 0 auto;
 }
@@ -299,10 +312,11 @@ nav ul li div {
   background-clip: text;
 }
 .main-realisation article p {
-  padding-left: 10%;
+  margin-left: 20%;
 }
 .main-realisation article li {
   text-align: center;
+  color: var(--light-grey);
 }
 
 /* ************************************************ Veilles Technologiques ************************************************** */
@@ -313,7 +327,6 @@ nav ul li div {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  /* padding: 20px; */
 }
 
 .main-veille-techno article {
@@ -350,8 +363,6 @@ nav ul li div {
 }
 
 .main-veille-techno article img {
-  width: 60%;
-  height: 50%;
   border-radius: 10px;
 }
 
@@ -363,8 +374,145 @@ nav ul li div {
 
 /* ******************************************************* mediaqueries ***************************************************** */
 
+/* ******************************************************* general ***************************************************** */
+
 @media screen and (max-width: 1200px) {
   nav ul {
     font-size: 0.68rem;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr 60px;
+  }
+  nav {
+    height: 60px;
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+    display: flex;
+    justify-content: center;
+    animation: gradient 60s ease infinite;
+    position: static;
+    /*Sans bandes noires*/
+    background: linear-gradient(
+      90deg,
+      rgba(226, 68, 33, 0.5) 5%,
+      rgba(226, 68, 33, 0.75) 10%,
+      rgba(226, 68, 33, 0.5) 20%,
+
+      rgba(243, 125, 15, 0.5) 25%,
+      rgba(243, 125, 15, 0.75) 30%,
+      rgba(243, 125, 15, 0.5) 40%,
+
+      rgba(226, 172, 33, 0.5) 45%,
+      rgba(226, 172, 33, 0.75) 50%,
+      rgba(226, 172, 33, 0.5) 60%,
+
+      rgba(243, 125, 15, 0.5) 65%,
+      rgba(243, 125, 15, 0.75) 70%,
+      rgba(243, 125, 15, 0.5) 80%,
+
+      rgba(226, 68, 33, 0.5) 85%,
+      rgba(226, 68, 33, 0.75) 90%,
+      rgba(226, 68, 33, 0.5) 100%
+    );
+    background-size: 500% 100%;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 100%;
+    }
+    12.5% {
+      background-position: 25% 100%;
+    }
+    25% {
+      background-position: 50% 100%;
+    }
+    37.5% {
+      background-position: 75% 100%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    62.5% {
+      background-position: 75% 100%;
+    }
+    75% {
+      background-position: 50% 100%;
+    }
+    87.5% {
+      background-position: 25% 100%;
+    }
+    100% {
+      background-position: 0% 100%;
+    }
+  }
+  nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: unset;
+    font-size: 2.4vw;
+  }
+  nav ul li div {
+    height: 25px;
+    width: 1px;
+  }
+  main {
+    grid-column: 1 / -1;
+    grid-row: 2 / 2;
+  }
+  #social {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    grid-column: 1 / 1;
+    grid-row: -2 / -1;
+    position: static;
+    place-self: center;
+  }
+}
+svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* ********************************************************* Acceuil ******************************************************* */
+@media screen and (max-width: 415px) {
+  .presentation {
+    margin-top: 20px;
+    font-size: 3.5vmin;
+  }
+  .key-word {
+    font-size: 4vmin;
+  }
+}
+
+/* ******************************************************* Realisation ***************************************************** */
+
+/* ******************************************************* veille techno ***************************************************** */
+
+@media screen and (max-width: 900px) {
+  .main-veille-techno article {
+    display: block;
+  }
+
+  .main-veille-techno article p {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 281px) {
+  .main-veille-techno article h1 {
+    font-size: 1rem;
+  }
+  .main-veille-techno article img {
+    width: 100%;
   }
 }

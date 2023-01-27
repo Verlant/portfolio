@@ -1,14 +1,13 @@
+@import url("https://fonts.cdnfonts.com/css/clear-sans");
+@import url("https://fonts.cdnfonts.com/css/ubuntu");
 :root {
-  /* --primary-color-CV: #e27121; */
-  /* --primary-dark-color-CV: #974a12; */
   --primary-color-CV: #f37d0f;
   --primary-dark-color-CV: #1a1918;
   --white-CV: #e5dfda;
   --black-CV: #1a1819;
   --grey-CV: #bdb6b6;
   --dark-grey-CV: #5c5d63;
-}
-:root {
+  /* *************************** */
   --orange: #f37d0f;
   --yellow: #e2ac21;
   --red: #e24421;
@@ -22,15 +21,10 @@
   --font-spy_agency_3D: "Spy Agency 3D", sans-serif;
   --font-masone: "Masone", sans-serif;
 }
-/* #e65d2c #8d3413*/
-/* #008E9C #15D6E8*/
-@import url("https://fonts.cdnfonts.com/css/clear-sans");
-@import url("https://fonts.cdnfonts.com/css/ubuntu");
-.body-CV {
-  min-height: 100vmin;
+
+.container-CV {
   flex-wrap: wrap;
-  background-color: var(--black-CV);
-  /* background: linear-gradient(to right, #008e9c, #045e66, #045e66, #008e9c); */
+  grid-column: 2 / -1;
 }
 .flex-column {
   display: flex;
@@ -49,36 +43,22 @@
 }
 .header-CV {
   width: 20%;
-  min-width: 200px;
+  min-width: 260px;
   margin: 10px;
   padding: 15px;
   color: var(--white-CV);
   gap: 10px;
   margin-top: 60px;
-  margin-left: 10%;
 }
-#container_photo-nom {
+#container-nom {
   width: auto;
   background-color: transparent;
   border-radius: 0;
   margin: 0;
   padding: 0;
   color: transparent;
-  /* box-shadow: none; */
   position: relative;
-  margin-top: 100px;
   border: none;
-}
-#photo {
-  width: 200px;
-  height: 200px;
-  align-self: center;
-  position: absolute;
-  top: -175px;
-  border-radius: 50%;
-  /* box-shadow: 2px 2px 1px var(--dark-grey-CV), -2px -2px 1px var(--dark-grey-CV); */
-  background-image: url(../assets/Photo_CV.jpg);
-  background-size: cover;
 }
 #nom {
   width: 100%;
@@ -87,8 +67,6 @@
   gap: 10px;
   background-color: var(--black-CV);
   border: 1px solid var(--light-grey);
-
-  /* box-shadow: 2px 2px 1px var(--primary-dark-color-CV); */
 }
 #nom > .h1-CV {
   color: var(--black-CV);
@@ -106,7 +84,8 @@
 .aside-CV {
   width: 50%;
   min-width: 300px;
-  height: 95%;
+  /* height: 95%; */
+  align-items: center;
 }
 .div-CV {
   width: 85%;
@@ -116,7 +95,6 @@
   margin: 10px;
   padding: 15px;
   color: var(--white-CV);
-  /* box-shadow: 2px 2px 1px var(--dark-grey-CV); */
 }
 .ul-CV {
   list-style-type: none;
@@ -168,48 +146,59 @@
   gap: 5px;
 }
 
-@media screen and (max-width: 1214px) {
+@media screen and (max-width: 1350px) {
   .header-CV {
     position: sticky;
-    top: 70px;
+    top: 15%;
     align-self: flex-start;
   }
   .footer-CV {
     position: sticky;
     top: 20%;
     align-self: flex-start;
-    /* margin-left: 0; */
   }
 }
 
-@media screen and (max-width: 854px) {
-  .header-CV {
-    position: sticky;
-    top: 70px;
-    align-self: flex-start;
-  }
+@media screen and (max-width: 1095px) {
   .footer-CV {
     position: static;
     margin-left: 250px;
   }
 }
 
-@media screen and (max-width: 659px) {
-  .body-CV {
+@media screen and (max-height: 670px) {
+  .header-CV {
+    margin-top: 0;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 740px) and (max-width: 1095px) {
+  .header-CV {
+    margin: 70px 0 0 0;
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container-CV {
     flex-direction: column;
+    flex-basis: max-content;
   }
   .header-CV {
     position: static;
-    margin-top: 70px;
-    margin-left: 0;
-    padding-left: 0;
     align-self: center;
-  }
-  .main-CV {
-    padding-left: 20px;
+    margin-top: 0px;
   }
   .footer-CV {
     margin-left: 0;
     align-self: center;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .container-CV {
+    grid-column: 1 / -1;
+    grid-row: 2 / 2;
   }
 }
