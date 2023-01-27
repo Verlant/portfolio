@@ -1,5 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/microsport");
 @import url("https://fonts.cdnfonts.com/css/spy-agency");
+@import url("https://fonts.cdnfonts.com/css/masone");
 
 :root {
   --orange: #f37d0f;
@@ -13,6 +14,7 @@
   --font-microsport: "Microsport", sans-serif;
   --font-spy_agency: "Spy Agency", sans-serif;
   --font-spy_agency_3D: "Spy Agency 3D", sans-serif;
+  --font-masone: "Masone", sans-serif;
 }
 *,
 ::before,
@@ -22,29 +24,32 @@
   box-sizing: border-box;
 }
 body {
+  min-height: 100vh;
   display: flex;
   background-color: var(--black);
   font-family: var(--font-microsport);
-  position: relative;
+  /* position: relative; */
 }
 main {
-  height: 100vh;
   width: 90%;
+  margin-left: 10%;
 }
 ul {
   list-style: none;
 }
 
 /* ********************************************************* Nav Bar ******************************************************* */
-
+/* header {
+  position: sticky;
+} */
 nav {
   height: 100vh;
   width: 10%;
+  min-width: 120px;
   display: flex;
   justify-content: center;
   animation: gradient 60s ease infinite;
-  position: sticky;
-  left: 0;
+  position: fixed;
   /*Sans bandes noires*/
   background: linear-gradient(
     180deg,
@@ -237,22 +242,129 @@ nav ul li div {
 /* ******************************************************* Realisation ***************************************************** */
 .main-realisation {
   color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding: 20px; */
+  font-family: var(--font-masone);
 }
 .main-realisation article {
-  width: 80%;
-  height: 80%;
+  width: 30%;
+  min-width: 300px;
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 10px;
+  margin: 10px;
 }
 #audio_player_img {
-  width: 100%;
-  height: 80%;
-  background-image: url(../assets/audio_player.png);
+  max-width: 100%;
+  max-height: 20%;
+  /* background-image: url(../assets/audio_player.png);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center; */
+  border-radius: 10px;
+  margin: 0 auto;
 }
 #asso_couture_img {
-  width: 50%;
-  height: 50%;
-  background-image: url(../assets/asso_couture.png);
+  max-width: 40%;
+  max-height: 20%;
+  /* background-image: url(../assets/asso_couture.png);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center; */
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.main-realisation article h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-microsport);
+}
+.main-realisation article h2 > a {
+  background: radial-gradient(
+    100% 124.19% at 0% 0%,
+    rgba(226, 68, 33, 0.8) 0%,
+    rgba(243, 125, 15, 0.8) 30%,
+    rgba(226, 172, 33, 0.8) 50%,
+    rgba(243, 125, 15, 0.8) 70%,
+    rgba(226, 68, 33, 0.8) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.main-realisation article p {
+  padding-left: 10%;
+}
+.main-realisation article li {
+  text-align: center;
+}
+
+/* ************************************************ Veilles Technologiques ************************************************** */
+
+.main-veille-techno {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding: 20px; */
+}
+
+.main-veille-techno article {
+  width: 80%;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid var(--light-grey);
+  border-radius: 20px;
+}
+
+.main-veille-techno article div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-veille-techno article h1 {
+  margin-bottom: 15px;
+  background: radial-gradient(
+    100% 124.19% at 0% 0%,
+    rgba(226, 68, 33, 0.8) 0%,
+    rgba(243, 125, 15, 0.8) 30%,
+    rgba(226, 172, 33, 0.8) 50%,
+    rgba(243, 125, 15, 0.8) 70%,
+    rgba(226, 68, 33, 0.8) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.main-veille-techno article img {
+  width: 60%;
+  height: 50%;
+  border-radius: 10px;
+}
+
+.main-veille-techno article p {
+  width: 60%;
+  margin-top: 40px;
+  font-family: var(--font-masone);
+}
+
+/* ******************************************************* mediaqueries ***************************************************** */
+
+@media screen and (max-width: 1200px) {
+  nav ul {
+    font-size: 0.68rem;
+  }
 }

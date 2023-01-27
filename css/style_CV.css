@@ -1,0 +1,215 @@
+:root {
+  /* --primary-color-CV: #e27121; */
+  /* --primary-dark-color-CV: #974a12; */
+  --primary-color-CV: #f37d0f;
+  --primary-dark-color-CV: #1a1918;
+  --white-CV: #e5dfda;
+  --black-CV: #1a1819;
+  --grey-CV: #bdb6b6;
+  --dark-grey-CV: #5c5d63;
+}
+:root {
+  --orange: #f37d0f;
+  --yellow: #e2ac21;
+  --red: #e24421;
+  --white: #e5dfda;
+  --light-grey: #bfbab6;
+  --grey: #807c79;
+  --dark-grey: #403e3d;
+  --black: #1a1918;
+  --font-microsport: "Microsport", sans-serif;
+  --font-spy_agency: "Spy Agency", sans-serif;
+  --font-spy_agency_3D: "Spy Agency 3D", sans-serif;
+  --font-masone: "Masone", sans-serif;
+}
+/* #e65d2c #8d3413*/
+/* #008E9C #15D6E8*/
+@import url("https://fonts.cdnfonts.com/css/clear-sans");
+@import url("https://fonts.cdnfonts.com/css/ubuntu");
+.body-CV {
+  min-height: 100vmin;
+  flex-wrap: wrap;
+  background-color: var(--black-CV);
+  /* background: linear-gradient(to right, #008e9c, #045e66, #045e66, #008e9c); */
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.header-CV {
+  width: 20%;
+  min-width: 200px;
+  margin: 10px;
+  padding: 15px;
+  color: var(--white-CV);
+  gap: 10px;
+  margin-top: 60px;
+  margin-left: 10%;
+}
+#container_photo-nom {
+  width: auto;
+  background-color: transparent;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  /* box-shadow: none; */
+  position: relative;
+  margin-top: 100px;
+  border: none;
+}
+#photo {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+  position: absolute;
+  top: -175px;
+  border-radius: 50%;
+  /* box-shadow: 2px 2px 1px var(--dark-grey-CV), -2px -2px 1px var(--dark-grey-CV); */
+  background-image: url(../assets/Photo_CV.jpg);
+  background-size: cover;
+}
+#nom {
+  width: 100%;
+  margin: 20px 0;
+  justify-content: flex-end;
+  gap: 10px;
+  background-color: var(--black-CV);
+  border: 1px solid var(--light-grey);
+
+  /* box-shadow: 2px 2px 1px var(--primary-dark-color-CV); */
+}
+#nom > .h1-CV {
+  color: var(--black-CV);
+}
+#nom > .h1-CV + .h1-CV {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--white-CV);
+}
+.main-CV {
+  width: 50%;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.aside-CV {
+  width: 50%;
+  min-width: 300px;
+  height: 95%;
+}
+.div-CV {
+  width: 85%;
+  background-color: var(--black-CV);
+  border: 1px solid var(--light-grey);
+  border-radius: 25px;
+  margin: 10px;
+  padding: 15px;
+  color: var(--white-CV);
+  /* box-shadow: 2px 2px 1px var(--dark-grey-CV); */
+}
+.ul-CV {
+  list-style-type: none;
+}
+.a-CV {
+  text-decoration: underline;
+  color: var(--primary-color-CV);
+}
+.p-CV,
+.li-CV {
+  font-family: var(--font-masone);
+  margin: 10px;
+}
+.h1-CV,
+.h2-CV,
+.h3-CV {
+  margin-left: 10px;
+  font-family: var(--font-microsport);
+  background: radial-gradient(
+    100% 124.19% at 0% 0%,
+    rgba(226, 68, 33, 0.8) 0%,
+    rgba(243, 125, 15, 0.8) 30%,
+    rgba(226, 172, 33, 0.8) 50%,
+    rgba(243, 125, 15, 0.8) 70%,
+    rgba(226, 68, 33, 0.8) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.h4-CV {
+  margin: 5px 0;
+  font-family: var(--font-microsport);
+  color: var(--light-grey);
+}
+
+.bold_text {
+  font-weight: bold;
+  color: var(--light-grey);
+}
+
+.profil > p {
+  text-indent: 15px;
+}
+.footer-CV {
+  min-width: 200px;
+  margin-top: 10px;
+  color: var(--white-CV);
+  gap: 5px;
+}
+
+@media screen and (max-width: 1214px) {
+  .header-CV {
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+  }
+  .footer-CV {
+    position: sticky;
+    top: 20%;
+    align-self: flex-start;
+    /* margin-left: 0; */
+  }
+}
+
+@media screen and (max-width: 854px) {
+  .header-CV {
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+  }
+  .footer-CV {
+    position: static;
+    margin-left: 250px;
+  }
+}
+
+@media screen and (max-width: 659px) {
+  .body-CV {
+    flex-direction: column;
+  }
+  .header-CV {
+    position: static;
+    margin-top: 70px;
+    margin-left: 0;
+    padding-left: 0;
+    align-self: center;
+  }
+  .main-CV {
+    padding-left: 20px;
+  }
+  .footer-CV {
+    margin-left: 0;
+    align-self: center;
+  }
+}

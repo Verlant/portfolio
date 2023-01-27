@@ -5,9 +5,9 @@
 include_once 'head.php'
 ?>
 
-<body>
+<body class="body-CV">
     <?php
-    include_once 'header.php';
+    // include_once 'header.php';
     include_once 'nav.php';
     if (!isset($page)) {
         $page = 'acceuil';
@@ -34,7 +34,7 @@ include_once 'head.php'
             die();
             break;
     }
-    include_once 'footer.php';
+    // include_once 'footer.php';
     ?>
 </body>
 
