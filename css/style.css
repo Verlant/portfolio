@@ -346,6 +346,10 @@ nav ul li div {
   border-radius: 20px;
 }
 
+.main-veille-techno article a {
+  color: #6610f2;
+}
+
 .main-veille-techno article div {
   display: flex;
   flex-direction: column;
