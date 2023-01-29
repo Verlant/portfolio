@@ -41,6 +41,9 @@ ul {
   list-style: none;
 }
 a {
+  text-decoration: none;
+}
+footer a {
   color: var(--orange);
 }
 
@@ -60,7 +63,7 @@ svg {
   height: 30px;
 }
 
-/* ********************************************************* Nav Bar ******************************************************* */
+/* ***************************************** Nav Bar ******************************************************* */
 nav {
   height: 100vh;
   width: 10%;
@@ -204,7 +207,7 @@ nav ul li div {
   background-color: var(--black);
 }
 
-/* ********************************************************* Acceuil ******************************************************* */
+/* ********************************************* Acceuil ******************************************************* */
 
 .main-acceuil {
   display: flex;
@@ -260,7 +263,7 @@ nav ul li div {
   font-family: var(--font-microsport);
 }
 
-/* ******************************************************* Realisation ***************************************************** */
+/* ****************************************** Realisation ***************************************************** */
 
 .main-realisation {
   color: var(--white);
@@ -292,13 +295,14 @@ nav ul li div {
   border-radius: 10px;
   margin: 0 auto;
 }
-.main-realisation article h2 {
+.main-realisation article div {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: var(--font-microsport);
 }
-.main-realisation article h2 > a {
+.main-realisation article h2 {
+  font-family: var(--font-microsport);
   background: radial-gradient(
     100% 124.19% at 0% 0%,
     rgba(226, 68, 33, 0.8) 0%,
@@ -310,6 +314,7 @@ nav ul li div {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-top: 20px;
 }
 .main-realisation article p {
   margin-left: 20%;
@@ -319,7 +324,7 @@ nav ul li div {
   color: var(--light-grey);
 }
 
-/* ************************************************ Veilles Technologiques ************************************************** */
+/* *************************************** Veilles Technologiques ************************************************** */
 
 .main-veille-techno {
   color: var(--white);
@@ -365,16 +370,67 @@ nav ul li div {
 .main-veille-techno article img {
   border-radius: 10px;
 }
+.main-veille-techno article svg {
+  width: 50%;
+  height: 50%;
+}
 
 .main-veille-techno article p {
   width: 60%;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   font-family: var(--font-masone);
 }
 
-/* ******************************************************* mediaqueries ***************************************************** */
+/* ****************************************** Techno ***************************************************** */
+.main-techno {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 25px 0;
+}
+.main-techno h1,
+.main-techno h2 {
+  width: 95%;
+  background: radial-gradient(
+    100% 124.19% at 0% 0%,
+    rgba(226, 68, 33, 0.8) 0%,
+    rgba(243, 125, 15, 0.8) 30%,
+    rgba(226, 172, 33, 0.8) 50%,
+    rgba(243, 125, 15, 0.8) 70%,
+    rgba(226, 68, 33, 0.8) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+}
+.main-techno p,
+.main-techno li {
+  width: 95%;
+  /* margin: 0 5%; */
+  padding: 0 5%;
+  /* padding: 20px; */
+  text-indent: 50px;
+  font-family: var(--font-masone);
+  color: var(--white);
+}
+.main-techno li {
+  padding: 5px;
+}
+.main-techno li pre {
+  margin: 0 25%;
+}
+.main-techno pre {
+  width: 50%;
+  margin: 0 5%;
+  color: var(--light-grey);
+}
 
-/* ******************************************************* general ***************************************************** */
+/* ********************************************* mediaqueries ***************************************************** */
+
+/* ********************************************* general ***************************************************** */
 
 @media screen and (max-width: 1200px) {
   nav ul {
@@ -483,7 +539,7 @@ svg {
   height: 25px;
 }
 
-/* ********************************************************* Acceuil ******************************************************* */
+/* ***************************************** Acceuil ******************************************************* */
 @media screen and (max-width: 415px) {
   .presentation {
     margin-top: 20px;
@@ -494,9 +550,9 @@ svg {
   }
 }
 
-/* ******************************************************* Realisation ***************************************************** */
+/* ***************************************** Realisation ***************************************************** */
 
-/* ******************************************************* veille techno ***************************************************** */
+/* ***************************************** veille techno ***************************************************** */
 
 @media screen and (max-width: 900px) {
   .main-veille-techno article {
@@ -505,6 +561,7 @@ svg {
 
   .main-veille-techno article p {
     width: auto;
+    margin-top: 20px;
   }
 }
 
@@ -514,5 +571,63 @@ svg {
   }
   .main-veille-techno article img {
     width: 100%;
+  }
+}
+
+/* ****************************************** Techno ***************************************************** */
+@media screen and (max-width: 900px) {
+  .main-techno h1,
+  .main-techno h2,
+  .main-techno p,
+  .main-techno li {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main-techno h1,
+  .main-techno h2,
+  .main-techno p,
+  .main-techno li {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main-techno h1,
+  .main-techno h2,
+  .main-techno p,
+  .main-techno li {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .main-techno h1,
+  .main-techno h2,
+  .main-techno p,
+  .main-techno li {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-techno h1,
+  .main-techno h2,
+  .main-techno p,
+  .main-techno li {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-techno h1,
+  .main-techno h2,
+  .main-techno p,
+  .main-techno li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .main-techno h1,
+  .main-techno h2,
+  .main-techno p,
+  .main-techno li {
+    width: 40%;
   }
 }

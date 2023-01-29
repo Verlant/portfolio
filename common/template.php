@@ -28,6 +28,9 @@ include_once 'head.php'
         case 'cv':
             include_once 'content/cv_content.php';
             break;
+        case 'bootstrap':
+            include_once 'content/veilles_techno/bootstrap.php';
+            break;
         default:
             // include_once 'content/404.html';
             header("Location: content/404.html");
