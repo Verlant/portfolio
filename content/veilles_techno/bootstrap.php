@@ -81,16 +81,20 @@
     <p>
         Pour utiliser bootstrap, rien de plus simple, il suffit d'ajouter, dans la balise
 
-        &lt;head&gt; la ligne suivante :
+        &lt;head&gt; le lien CDN (Content Delivery Network) de
+        <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank">
+            bootstrap
+        </a>
+        dans une balise &lt;link&gt;.
     </p>
-    <pre>
+    <!-- <pre>
         &lt;link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
         rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
         crossorigin="anonymous"
         /&gt;
-    </pre>
+    </pre> -->
     <p>
         Cela importera direct la feuille de style de bootstrap comportant tout le
         framework CSS dans votre html. L'avantage avec cette façon de faire est que
@@ -101,18 +105,31 @@
     <p>
         Pour parer à cela il est possible de ne charger qu'une partie de bootstrap,
         par exemple si vous ne voulez utiliser que la grille bootstrap il suffit
-        d'inclure cette ligne dans la balise &lt;head&gt; :
+        d'inclure le fichier voulu dans la balise &lt;head&gt;.
     </p>
-    <pre>
+    <p>
+        Vous pouvez retrouver
+        <a href="https://getbootstrap.com/docs/5.3/getting-started/contents/" target="_blank">
+            ici
+        </a>
+        les différents fichier CSS contenant les classes de
+        bootstrap et ajuster le lien dans la balise &lt;link&gt;
+        en fonction des outils bootstrap que vous voulez.
+    </p>
+    <!-- <pre>
         &lt;link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap-grid.min.css"
         rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
         crossorigin="anonymous"
         /&gt;
-    </pre>
+    </pre> -->
     <p>
-        Cela permets de pouvoir placer les éléments facilement grâce aux classes de bootstrap
+        Cela permet de pouvoir placer les éléments facilement grâce aux classes de bootstrap
         et d'implémenter le design voulu aux composant du site web sans surcharger le CSS.
+    </p>
+    <p>
+        Voilà, c'est tout ce que j'ai à vous dire sur Bootstrap, si le framework vous intéresse
+        préparez vos claviers !
     </p>
 </main>

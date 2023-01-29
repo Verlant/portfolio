@@ -15,6 +15,7 @@
   --font-spy_agency: "Spy Agency", sans-serif;
   --font-spy_agency_3D: "Spy Agency 3D", sans-serif;
   --font-masone: "Masone", sans-serif;
+  --font-size: calc(0.01 * 10vmin);
 }
 *,
 ::before,
@@ -385,14 +386,15 @@ nav ul li div {
 .main-techno {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 20px;
   padding: 25px 0;
+  /* font-size: calc(20 * var(--font-size)); */
+  /* font-size: clamp(10px, 3vw, 20px); */
 }
 .main-techno h1,
 .main-techno h2 {
-  width: 95%;
+  /* width: 95%; */
   background: radial-gradient(
     100% 124.19% at 0% 0%,
     rgba(226, 68, 33, 0.8) 0%,
@@ -408,23 +410,19 @@ nav ul li div {
 }
 .main-techno p,
 .main-techno li {
-  width: 95%;
-  /* margin: 0 5%; */
   padding: 0 5%;
-  /* padding: 20px; */
   text-indent: 50px;
   font-family: var(--font-masone);
   color: var(--white);
 }
 .main-techno li {
-  padding: 5px;
+  padding: 5px 5%;
 }
-.main-techno li pre {
-  margin: 0 25%;
+.main-techno p a {
+  color: var(--orange);
 }
 .main-techno pre {
-  width: 50%;
-  margin: 0 5%;
+  margin: 0 25%;
   color: var(--light-grey);
 }
 
@@ -575,7 +573,7 @@ svg {
 }
 
 /* ****************************************** Techno ***************************************************** */
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
   .main-techno h1,
   .main-techno h2,
   .main-techno p,
@@ -630,4 +628,4 @@ svg {
   .main-techno li {
     width: 40%;
   }
-}
+} */
