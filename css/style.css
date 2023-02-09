@@ -316,12 +316,14 @@ nav ul li div {
 .main-veille-techno article div {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
+  gap: 15px;
+  max-width: 500px;
+  max-height: 600px;
 }
 
-.main-veille-techno article h1 {
-  margin-bottom: 15px;
+.main-veille-techno article h1,
+.main-veille-techno article span {
   background: radial-gradient(
     100% 124.19% at 0% 0%,
     rgba(226, 68, 33, 0.8) 0%,
